@@ -1,25 +1,19 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: anamart3 <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/07 14:50:49 by anamart3          #+#    #+#              #
-#    Updated: 2023/03/07 15:34:30 by anamart3         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME = libft.a
+MY_SOURCES = ft_isalpha.c \
+			ft_isdigit.c  \
+			ft_isalnum.c \
+			ft_isascii.c \
+			ft_strlen
+MY_OBJECTS = $(MY_SOURCES:.c=.o)
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+$(NAME): $(MY_OBJECTS)
+		@ar r $(NAME) $(MY_OBJECTS)
 
-NAME=	libft.a
-RM=		rm -f
-SRCS=	main.c \
-		isdigit.c
-CC=		gcc
-CFLAGS=	-Wall -Wextra -Werror
-
-all:	$(NAME)
-
-clean:	$(RM)
-
-$(NAME):
-	$(CC) $(CFLAGS) $(SRCS)
+all:    $(NAME)
+clean:
+	@rm -f $(MY_OBJECTS)
+fclean: clean
+	@rm -f $(NAME)
+re: fclean all
+.PHONY: all clean fclean re
