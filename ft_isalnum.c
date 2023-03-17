@@ -10,19 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if (c >= 65 && c <= 123)
-		return (1);
-	return (0);
-}
-
-int	ft_isdigit(int c)
-{
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
-}
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

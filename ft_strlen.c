@@ -19,11 +19,3 @@ int	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int main(void) {
-	printf("My function: %i\n", ft_strlen("hola"));
-	printf("Official function: %ld\n", strlen("hola"));
-    return (0);
-}*/
