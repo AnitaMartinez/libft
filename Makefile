@@ -6,7 +6,10 @@ SOURCE= main.c \
 	ft_isalnum.c \
 	ft_isprint.c \
 	ft_isascii.c \
-	ft_strlen.c
+	ft_strlen.c \
+	ft_memset.c \
+	ft_bzero \
+	ft_memcy
 
 all: program
 

@@ -16,24 +16,15 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	(unsigned char*)b;
-	
-	while (len >= 0)
+	unsigned char *str;
+	size_t i;
+
+	str = (unsigned char *) b;
+	i = 0;
+	while (i < len)
 	{
-		len--;
+		str[i] = (unsigned char) c;
+		i++;
 	}
-
-	return (0);	
-}
-
-int	main(void)
-{
-	char str[] = "hola que tal";
-	memset(str + 2, '*', 3);
-	printf("Official function %s\n", str);
-
-	char str1[] = "hola que tal";
-	ft_memset(str + 2, '*', 3);
-	printf("My function %s", str1);  
-	return (0);
+	return (b);
 }
