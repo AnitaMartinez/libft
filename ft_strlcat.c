@@ -1,15 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/29 19:09:49 by anamart3          #+#    #+#             */
+/*   Updated: 2023/03/29 19:10:01 by anamart3         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stddef.h>
 
 size_t	ft_strlen(const char *s);
 
-
-size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t dst_length;
-	size_t src_length;
-	size_t i_dst;
-	size_t i_src;
+	size_t	dst_length;
+	size_t	src_length;
+	size_t	i_dst;
+	size_t	i_src;
 
 	dst_length = ft_strlen(dst);
 	src_length = ft_strlen(src);

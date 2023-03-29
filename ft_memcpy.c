@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/29 19:07:58 by anamart3          #+#    #+#             */
+/*   Updated: 2023/03/29 19:13:13 by anamart3         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stddef.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
-	unsigned char *cdst;
-	const unsigned char *csrc;
+	size_t				i;
+	unsigned char		*cdst;
+	const unsigned char	*csrc;
 
 	if (!dst && !src)
-		return NULL;
+		return (0);
 	i = 0;
-	cdst = (unsigned char*) dst;
-	csrc = (const unsigned char*) src;
+	cdst = (unsigned char *) dst;
+	csrc = (const unsigned char *) src;
 	while (i < n)
 	{
 		cdst[i] = csrc[i];
@@ -18,7 +30,6 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
 
 /*#include <stdio.h>
 #include <string.h>
