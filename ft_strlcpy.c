@@ -2,7 +2,7 @@
 
 int	ft_strlen(const char *s);
 
-size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t src_length;
 	size_t i;
@@ -23,10 +23,10 @@ size_t ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize
 #include <string.h>
 int main(void)
 {
-	char dst[50] = NULL;
-	char src[] = "";
+	char dst[50] = "";
+	char src[] = "h";
 
-	char dst1[50] = NULL;
+	char dst1[50] = "";
 
 
 	printf("Oficcial function return: %lu\n", strlcpy(dst, src, 4));
