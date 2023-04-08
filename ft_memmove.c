@@ -6,12 +6,13 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:09:06 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/04 19:26:09 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:46:15 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
+// #include <stddef.h>
+// #include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

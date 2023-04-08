@@ -6,13 +6,12 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:08:32 by anamart3          #+#    #+#             */
-/*   Updated: 2023/03/29 19:09:36 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:46:19 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <string.h>
-#include <stdio.h>	
+// #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

@@ -6,13 +6,14 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 18:15:03 by anamart3          #+#    #+#             */
-/*   Updated: 2023/03/30 18:15:51 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:49:14 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+// #include <stddef.h>
+#include "libft.h"
 
-int	strcmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 

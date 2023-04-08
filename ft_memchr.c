@@ -6,13 +6,15 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:59:56 by anamart3          #+#    #+#             */
-/*   Updated: 2023/03/30 18:35:44 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:45:54 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+// #include <stddef.h>
 
-size_t	ft_strlen(const char *s);
+// size_t	ft_strlen(const char *s);
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

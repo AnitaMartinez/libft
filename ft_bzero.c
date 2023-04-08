@@ -6,11 +6,13 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:07:18 by anamart3          #+#    #+#             */
-/*   Updated: 2023/03/29 19:12:58 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:45:02 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+// #include <stddef.h>
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -28,7 +30,6 @@ void	ft_bzero(void *s, size_t n)
 
 /*#include <strings.h>
 #include <stdio.h>
-
 int main(void)
 {
 	char str[] = "hola";

@@ -6,13 +6,14 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:10:08 by anamart3          #+#    #+#             */
-/*   Updated: 2023/03/29 19:10:18 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/04 19:46:38 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+// #include <stddef.h>
 
-int	ft_strlen(const char *s);
+// int	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
