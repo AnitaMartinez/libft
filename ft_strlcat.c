@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:09:49 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 15:00:06 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:22:57 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	initial_dst_length = ft_strlen(dst);
 	src_length = ft_strlen(src);
-
 	i_dst = initial_dst_length;
 	i_src = 0;
-	
 	if (dstsize != 0)
 	{
 		while (src[i_src] && i_dst < dstsize - 1)
@@ -35,7 +33,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i_dst] = '\0';
 	}
-
 	if (initial_dst_length > dstsize)
 		return (src_length + dstsize);
 	return (initial_dst_length + src_length);
