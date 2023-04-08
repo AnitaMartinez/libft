@@ -66,8 +66,11 @@ It allocates sufficient memory for a copy of the string s1, does the copy, and r
 Functions that either are not from the libc library, or are but in a different way.
 
 - ft_substr
+It returns a substring of the string 's'. The substring starts from index 'start' and has a maximum length 'len'.
 - ft_strjoin
+It returns a new string, formed by the concatenation of 's1' and 's2'.
 - ft_strtrim
+It removes all characters from the string 'set' from the beginning and from the end of 's1'.
 - ft_split
 - ft_itoa
 - ft_strmapi
