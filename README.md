@@ -37,13 +37,14 @@ The memcpy() function copies n bytes from memory area 'src' to memory area 'dst'
 - **memmove**.
 The memmove function is used to copy a memory block from one location to another, even if the memory blocks overlap. If the source and destination overlap, memmove handles this case safely.
 - **strlcpy**.
-It copies characters from the string 'src' to the string 'dst'.
+It copies characters from the string 'src' to the string 'dst'.<br>
 The destination string is always terminated with a null character ('\0'), regardless of the number of characters copied.
 The function **returns the length of the source** string, which can be useful for checking if the string has been truncated.
 
 **Ocurrence functions**
 - **strchr**.
-It locates the first occurrence of c (converted to a char) in the string pointed to by s. It returns a pointer to the first occurrence of the character. The terminating null character is considered to be part of the string; therefore if c is ‘\0’, the functions locate the terminating ‘\0’.
+It locates the first occurrence of 'c' in the string. It returns a pointer to the first occurrence of the character.<br> 
+The terminating null character is considered to be part of the string; therefore if c is ‘\0’, the functions locate the terminating ‘\0’.
 - **strrchr**.
 It is like strchr, but it searches for the last occurrence of the character c.
 - **memchr**.
