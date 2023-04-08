@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:09:06 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 13:01:06 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 13:33:13 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,50 +18,44 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char		*cdst;
 	const unsigned char	*csrc;
 
+	if (!src && !dst)
+		return (0);
 	cdst = (unsigned char *) dst;
 	csrc = (const unsigned char *) src;
-	// printf("Dst %p\n", dst);
-	// printf("Src %p\n", src);
-	if (!dst && !src)
-		return (0);
-	if (dst <= src)
+	if (src < dst)
 	{
-		// printf("%s\n", "dst <= src");
+		i = len;
+		while (i > 0)
+		{
+			i--;
+			cdst[i] = csrc[i];
+		}
+	}
+	else
+	{
 		i = 0;
 		while (i < len)
 		{
 			cdst[i] = csrc[i];
 			i++;
-		}	
-	}
-	else if (dst > src)
-	{
-		// printf("%s\n", "dst > src");
-		i = len - 1;
-		while (i > 0)
-		{	
-			cdst[i] = csrc[i];
-			i--;
 		}
 	}
 	return (dst);
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(void)
-{
-	char dst[50] = "Hello";
-	char src[] = "world!";
+// #include <stdio.h>
+// #include <string.h>
+// int main(void)
+// {
+// 	char src[] = "hola";
+// 	char dest[50] = "adios";
+// 	char dest1[50] = "adios";
 
-	char dst1[] = "Hello";
+// 	printf("Official function returns: %s\n", memmove(dest + 1, src, 3));
+// 	printf("Official function: %s\n", dest);
 
+// 	printf("My function returns: %s\n", ft_memmove(dest1 + 1, src, 3));
+// 	printf("My function: %s", dest1);
 
-	printf("Oficcial function return: %s\n", memmove(dst + 5, src, 6));
-	printf("Official function dst: %s\n", dst);
-
-	printf("My function return: %s\n", ft_memmove(dst1 + 5, src, 6));
-	printf("My function dst: %s\n", dst1);
-
-	return (0);
-}
+// 	return (0);
+// }

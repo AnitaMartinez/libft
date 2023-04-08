@@ -10,7 +10,7 @@ These functions have the same prototypes and implement the same behaviors as the
 - **isalpha**.
 It checks whether a character is an alphabet or not, according to ASCII code (between 65 and 90 and between 97 and 122).
 - **isdigit**.
-It checks whether a character is numeric character(0-9) or not.
+It checks whether a character is numeric character (0-9) or not.
 - **isalnu**.
 It checks whether the argument passed is an alphanumeric character (alphabet or number) or not.
 - **isascii**.
@@ -29,15 +29,16 @@ It concatenates strings. It appends string src to the end of dst.
 It converts the string to int representation.
 
 **Functions of copying one vector into another**
+
 memcpy, memmove and strlcpy are functions used to copy strings and blocks of memory. Although all three functions serve a similar purpose, there are some differences between them in terms of how they handle memory and data.
-- **memcpy**
-The memcpy() function copies n bytes from memory area src to memory area dst.  If dst and src overlap, behavior is undefined. That is, memcpy does not check for overlap between the source and destination. If the source and destination overlap, the behavior of memcpy is undefined.
-- **memmove**
+- **memcpy**.
+The memcpy() function copies n bytes from memory area 'src' to memory area 'dst'.  If 'dst' and 'src' overlap, behavior is undefined. That is, memcpy does not check for overlap between the source and destination. If the source and destination overlap, the behavior of memcpy is undefined.
+- **memmove**.
 The memmove function is used to copy a memory block from one location to another, even if the memory blocks overlap. If the source and destination overlap, memmove handles this case safely.
-- **strlcpy**
-It copies characters from the string src to the string dst.
+- **strlcpy**.
+It copies characters from the string 'src' to the string 'dst'.
 The destination string is always terminated with a null character ('\0'), regardless of the number of characters copied.
-The function returns the length of the source string, which can be useful for checking if the string has been truncated.
+The function **returns the length of the source** string, which can be useful for checking if the string has been truncated.
 
 **Ocurrence functions**
 - **strchr**.
@@ -65,19 +66,19 @@ It allocates sufficient memory for a copy of the string s1, does the copy, and r
 
 Functions that either are not from the libc library, or are but in a different way.
 
-- ft_substr
+- **ft_substr**.
 It returns a substring of the string 's'. The substring starts from index 'start' and has a maximum length 'len'.
-- ft_strjoin
+- **ft_strjoin**.
 It returns a new string, formed by the concatenation of 's1' and 's2'.
-- ft_strtrim
+- **ft_strtrim**.
 It removes all characters from the string 'set' from the beginning and from the end of 's1'.
-- ft_split
-- ft_itoa
-- ft_strmapi
-- ft_striteri
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+- **ft_split**.
+- **ft_itoa**.
+- **ft_strmapi**.
+- **ft_striteri**.
+- **ft_putchar_fd**.
+- **ft_putstr_fd**.
+- **ft_putendl_fd**.
+- **ft_putnbr_fd**.
 
 
