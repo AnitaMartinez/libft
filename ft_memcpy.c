@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:07:58 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 12:28:16 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:43:43 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-/*#include <stdio.h>
 #include <string.h>
 int main(void)
 {

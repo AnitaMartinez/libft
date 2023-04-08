@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 19:27:48 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/04 19:46:48 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:44:07 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (0);
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
 //     char str1[] = "hola que tal";

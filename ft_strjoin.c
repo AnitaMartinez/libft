@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:13:04 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/08 18:22:41 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:44:10 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
 // 	char s1[] = "hola";

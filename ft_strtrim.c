@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:17:51 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/06 16:28:17 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/04/08 18:44:14 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ char *ft_strtrim(char const *s1, char const *set) // No la he terminado
 	return (str);
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
 // 	char s1[] = "AAAAhola,*mundo!***A";

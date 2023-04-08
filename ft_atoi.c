@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 12:03:04 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/02 13:08:16 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:43:35 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ int	ft_atoi(const char *str)
 }
 
 // #include <stdlib.h>
-// #include <stdio.h>
 // int	main(void){
 // 	char str[] = "   -15?34534";
 // 	printf("Official function: %i\n", atoi(str));

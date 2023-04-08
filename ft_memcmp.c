@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 18:51:55 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:21:46 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:43:44 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-// #include <stdio.h>
 // #include <string.h>
 // int	main(void)
 // {

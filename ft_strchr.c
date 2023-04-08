@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 18:59:56 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 17:22:43 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:43:46 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-// #include <stdio.h>
 // #include <string.h>
 
 // int	main(void)

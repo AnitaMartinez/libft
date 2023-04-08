@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:31:24 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/08 18:19:06 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:44:04 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
 // 	printf("My function: %s", ft_itoa(-123));

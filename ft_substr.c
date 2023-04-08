@@ -6,20 +6,18 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 12:25:27 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/08 18:16:21 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:42:51 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 
 	if (!s)
-		return NULL;
+		return (NULL);
 	substr = (char *)malloc(len + 1 * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
@@ -27,9 +25,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-// #include <stdio.h>
-// int main() {
-//     char str[] = "abcdef";
-// 	printf("%s", ft_substr(str, 2, 3));
-// 	return (0);
-// }
+int main() {
+    char str[] = "abcdef";
+	printf("%s", ft_substr(str, 2, 3));
+	return (0);
+}

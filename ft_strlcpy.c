@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:10:08 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:23:07 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:44:02 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (src_length);
 }
 
-// #include <stdio.h>
-// #include <string.h>
 // int main(void)
 // {
 // 	char dst[50] = "";

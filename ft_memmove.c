@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:09:06 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:30:18 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:43:49 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-// #include <stdio.h>
 // #include <string.h>
 // int main(void)
 // {
