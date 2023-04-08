@@ -6,15 +6,10 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 19:10:29 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/04 19:46:31 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 18:13:41 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stddef.h>
-// #include <stdlib.h>
-
-// size_t	ft_strlen(const char *s);
-// void	*ft_memmove(void *dst, const void *src, size_t len);
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
@@ -24,7 +19,9 @@ char	*ft_strdup(const char *s1)
 
 	str_length = ft_strlen(s1);
 	dst = (char *)malloc(str_length + 1 * sizeof(char));
-	ft_memmove(dst, (char *)s1, str_length);
+	if (dst == NULL)
+		return (NULL);
+	ft_strlcpy(dst, (const char *)s1, str_length + 1);
 	return (dst);
 }
 
@@ -33,9 +30,14 @@ char	*ft_strdup(const char *s1)
 // int main(void)
 // {
 // 	char str[] = "hola";
+// 	char *my_result = ft_strdup(str);
+// 	char *official_result = strdup(str);
 
-// 	printf("My function: %s\n", ft_strdup(str));
-// 	printf("Official function: %s", strdup(str));
+// 	printf("my_result: %s\n", my_result);
+// 	printf("official_result: %s\n", official_result);
+
+// 	free(my_result);
+// 	free(official_result);
 
 // 	return (0);
 // }
