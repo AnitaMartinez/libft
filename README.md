@@ -22,7 +22,8 @@ It copies the character c (an unsigned char) to the first n characters of the st
 - **bzero**.
 It erases the data in the n bytes of the memory. Starting at the location pointed to by s, by writing zeros.
 - **strlcat**.
-It concatenates strings. It appends string src to the end of dst.
+It concatenates strings. It appends string 'src' to the end of 'dst'.
+It returns the total length of the string it tries to create, that means the initial length of 'dst' plus the length of 'src'.
 - **toupper**.
 - **tolower**.
 - **atoi**.
@@ -51,10 +52,12 @@ It locates the first occurrence of c (converted to an unsigned char) in string s
 It locates the first occurrence of the null-terminated string needle in the null-terminated string haystack.
 
 **Comparation functions**
-- **strncmp**.
-It compares at most the first n bytes of str1 and str2. It returns an integer greater than, equal to, or less than 0, according as the string s1 is greater than, equal to, or less than the string s2.
 - **memcmp**.
-It compares byte string s1 against byte string s2.
+It compares byte string 's1' against byte string 's2'. 
+If they are equal, it returns 0; if they are not equal, it returns the subtraction of the first different character.
+- **strncmp**.
+It compares at most the first 'n' bytes of 'str1' and 'str2'. It returns an integer greater than, equal to, or less than 0, according as the string 's1' is greater than, equal to, or less than the string 's2'.
+As it is designed for comparing strings rather than binary data, characters that appear after a `\0' character are not compared.
 
 **Functions that use malloc**
 - **calloc**.
