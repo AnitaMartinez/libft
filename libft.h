@@ -6,14 +6,14 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:30:07 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/04 19:50:58 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/08 12:17:06 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
 
-// #include <stdio.h>
+#include <stdio.h> // luego borrar
 #include <stddef.h>
 #include <stdlib.h>
 
