@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:07:58 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:43:43 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/09 17:46:09 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,17 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
-#include <string.h>
-int main(void)
-{
-	char src[] = "hola";
-	char dest[50] = "adios";
-	char dest1[50] = "adios";
+// #include <string.h>
+// int main(void)
+// {
+// 	char src[] = "hola";
+// 	char dest[50] = "adios";
+// 	char dest1[50] = "adios";
 
-	printf("Official function returns: %s\n", memcpy(dest + 1, src, 3));
-	printf("Official function: %s\n", dest);
+// 	printf("Official function returns: %s\n", memcpy(dest + 1, src, 3));
+// 	printf("Official function: %s\n", dest);
 
-	printf("My function returns: %s\n", ft_memcpy(dest1 + 1, src, 3));
-	printf("My function: %s", dest1);
-	return (0);
-}*/
+// 	printf("My function returns: %s\n", ft_memcpy(dest1 + 1, src, 3));
+// 	printf("My function: %s", dest1);
+// 	return (0);
+// }

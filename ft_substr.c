@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 12:25:27 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/08 18:42:51 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/09 18:32:43 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substr;
+	char			*substr;
+	int				source_len;
+	unsigned int	result_len;
 
 	if (!s)
 		return (NULL);
+	source_len = ft_strlen(s);
+	if (len <= 0 || start > (unsigned int)source_len)
+		return (ft_strdup(""));
+
+	result_len = (unsigned int)source_len - start;
+	if (result_len < len)
+		len = result_len;
 	substr = (char *)malloc(len + 1 * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
@@ -25,8 +34,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-int main() {
-    char str[] = "abcdef";
-	printf("%s", ft_substr(str, 2, 3));
-	return (0);
-}
+// int main() {
+//     char str[] = "banana";
+// 	unsigned int start = 4;
+// 	size_t size = 3;
+// 	printf("%s", ft_substr(str, start, size));
+// 	return (0);
+// }
