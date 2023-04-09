@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 15:36:03 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 12:50:34 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/09 18:47:47 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,9 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+
+// int	main(void)
+// {
+// 	ft_isalpha('a');
+// 	return (0);
+// }
