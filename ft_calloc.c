@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 13:09:22 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:43:38 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/11 16:38:24 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int	*ptr;
+	void	*ptr;
 
 	ptr = malloc(count * size);
 	if (ptr == NULL)

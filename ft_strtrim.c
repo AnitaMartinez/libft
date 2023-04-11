@@ -6,44 +6,48 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:17:51 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/08 18:44:14 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/11 19:47:23 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-int	ft_strlen(const char *s);
-
-char *ft_strtrim(char const *s1, char const *set) // No la he terminado
+static int	get_index_begin(char const *s1, char const *set)
 {
-	size_t i;
-	size_t len;
-	char *str;
+	int	i;
 
-	if (!s1 || !set)
-		return NULL;
-
-	len = ft_strlen(s1);
-	str = (char *)s1;
 	i = 0;
-	while (set[i])
-	{
-		if (ft_strchr(str, set[i]))
-		{
-			str = ft_substr(str, i, len);
-		}
+	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
-	}
+	return (i);
+}
 
-	return (str);
+static int	get_index_end(char const *s1, char const *set)
+{
+	int	i;
+
+	i = ft_strlen(s1) - 1;
+	while (i >= 0 && ft_strchr(set, s1[i]))
+		i--;
+	return (i);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int	index_begin;
+	int	index_end;
+
+	if (!s1 && !set)
+		return (NULL);
+	index_begin = get_index_begin(s1, set);
+	index_end = get_index_end(s1, set);
+	return (ft_substr(s1, index_begin, index_end + 1 - index_begin));
 }
 
 // int	main(void)
 // {
-// 	char s1[] = "AAAAhola,*mundo!***A";
-// 	char s2[] = "A*";
+// 	char s1[] = "fsabcdef";
+// 	char s2[] = "fas";
 // 	printf("%s", ft_strtrim(s1, s2));
 // 	return (0);
 // }

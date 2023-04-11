@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 12:03:04 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:43:35 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/11 16:45:45 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,3 @@ int	ft_atoi(const char *str)
 // 	printf("My function: %i\n", ft_atoi(str));
 // 	return (0);
 // }
-

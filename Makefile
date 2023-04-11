@@ -25,6 +25,7 @@ SOURCE= ft_isalpha.c \
 	ft_strdup.c \
 	ft_substr.c \
 	ft_strjoin.c \
+	ft_strtrim.c \
 	ft_itoa.c
 
 MY_OBJECTS = $(SOURCE:.c=.o)

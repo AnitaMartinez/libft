@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:13:04 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/09 19:36:07 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/04/11 19:46:39 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // 	printf("%s", ft_strjoin(s1, s2));
 // 	return (0);
 // }
-
