@@ -6,13 +6,13 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:17:51 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/11 19:47:23 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/12 16:26:23 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_index_begin(char const *s1, char const *set)
+static int	get_index_start(char const *s1, char const *set)
 {
 	int	i;
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 && !set)
 		return (NULL);
-	index_begin = get_index_begin(s1, set);
+	index_begin = get_index_start(s1, set);
 	index_end = get_index_end(s1, set);
 	return (ft_substr(s1, index_begin, index_end + 1 - index_begin));
 }

@@ -6,13 +6,13 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:48:54 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/11 21:00:20 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:13:56 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_words_number(char const *s, char c)
+int	number_of_words(char const *s, char c)
 {
 	int	i;
 	int n;
@@ -21,36 +21,56 @@ int	get_words_number(char const *s, char c)
 	n = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
+			n++;
+		i++;
+	}
+	return (n);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int words_number;
+	char **strings;
+	char *string;
+	int	i;
+	int	start;
+	int	len;
+	int	index_final_array;
+
+	words_number = number_of_words(s, c);
+	strings = ft_calloc((size_t)words_number + 1, sizeof(char *));
+	if (strings == NULL)
+		return (NULL);
+
+	i = 0;
+	index_final_array = 0;
+	while(s[i])
+	{
+		if ((s[i] != c) && (s[i - 1] == c || i - 1 == -1))
+			start = i;
+		if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
-			if (i == 0)
-				n += 0;
-			else if (i == 1 && s[0] == c) // esque esto no funcinoa si hay muchas adelante
-				n += 0;
-			else if (s[i + 1] == '\0')
-				n += 0;
-			else if (s[i + 1] == c)
-				n += 0;
-			else
-				n++;
+			len = (i - start) + 1;
+			string = ft_substr(s, start, len);
+			strings[index_final_array] = string;
+			index_final_array++;
 		}
 		i++;
 	}
-	return (n + 1);
+	return (strings);
 }
 
-// char	**ft_split(char const *s, char c)
+// int	main(void)
 // {
-// 	int words_number;
-
-// 	words_number = get_words_number(s, c);
-
+// 	char str[] = "   hola que  tal  ";
+// 	char **result = ft_split(str, ' ');
+// 	int	i;
+// 	i = 0;
+// 	while (result[i])
+// 	{
+// 		printf("String: %s\n", result[i]);
+// 		i++;
+// 	}
+// 	return (0);
 // }
-
-int	main(void)
-{
-	char str[] = ",,,hola,que,tal,";
-	printf("%i\n", get_words_number(str, ','));
-	// ft_split(str, ',');
-	return (0);
-}
