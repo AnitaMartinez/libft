@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 12:03:04 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/11 16:45:45 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/13 19:45:52 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	get_sign(const char *str, int *counter)
+#include "libft.h"
+
+static int	get_sign(const char *str, int *counter)
 {
 	int	sign;
 	int	i;

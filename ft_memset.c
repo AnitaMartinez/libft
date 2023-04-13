@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:08:32 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/04 19:46:19 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/13 19:46:41 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stddef.h>
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:07:18 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:43:52 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/13 19:45:59 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int main(void)
 	bzero(str, 1);
 	printf("Official function: %s\n", str + 2);
 	ft_bzero(str1, 1);
-	printf("My function: %s", str1 + 2);	
+	printf("My function: %s", str1 + 2);
 	return (0);
 }*/
