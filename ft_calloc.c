@@ -3,20 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 13:09:22 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/11 16:38:24 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/13 19:27:04 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stddef.h>
-// #include <stdlib.h>
-
 #include "libft.h"
-
-// No sé si tengo que contemplar que me pasen un número 
-//superior al de int o algo así
 
 void	*ft_calloc(size_t count, size_t size)
 {
