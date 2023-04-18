@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:48:54 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/12 19:09:40 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:55:04 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	number_of_words(char const *s, char c)
 {
 	int	i;
-	int n;
+	int	n;
 
 	i = 0;
 	n = 0;
@@ -28,47 +28,60 @@ static int	number_of_words(char const *s, char c)
 	return (n);
 }
 
-char	**ft_split(char const *s, char c)
+void	set_final_item(char **strings, int index)
 {
-	int words_number;
-	char **strings;
+	char	*ptrnull;
+
+	ptrnull = NULL;
+	strings[index] = ptrnull;
+}
+
+void	set_strings(char const *s, char c, char **strings, int	*i_final_array)
+{
 	int	i;
 	int	start;
 	int	len;
-	int	index_final_array;
-	char *ptrnull;
+	int	ci_final_array;
+
+	ci_final_array = *i_final_array;
+	i = 0;
+	while (s[i])
+	{
+		if ((s[i] != c) && (i == 0 || s[i - 1] == c))
+			start = i;
+		if ((s[i] != c) && (s[i + 1] == '\0' || s[i + 1] == c))
+		{
+			len = (i - start) + 1;
+			strings[ci_final_array] = ft_substr(s, start, len);
+			ci_final_array++;
+		}
+		i++;
+	}
+	*i_final_array = ci_final_array;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	int		words_number;
+	char	**strings;
+	int		i_final_array;
 
 	if (!s)
 		return (NULL);
-
 	words_number = number_of_words(s, c);
 	strings = malloc((words_number + 1) * sizeof(char *));
 	if (strings == NULL)
 		return (NULL);
-
-	i = 0;
-	index_final_array = 0;
-	while(s[i])
-	{
-		if ((s[i] != c) && (s[i - 1] == c || i - 1 == -1))
-			start = i;
-		if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
-		{
-			len = (i - start) + 1;
-			strings[index_final_array] = ft_substr(s, start, len);
-			index_final_array++;
-		}
-		i++;
-	}
-	ptrnull = NULL;
-	strings[index_final_array] = ptrnull;
+	i_final_array = 0;
+	set_strings(s, c, strings, &i_final_array);
+	set_final_item(strings, i_final_array);
 	return (strings);
 }
 
 // int	main(void)
 // {
-// 	char str[] = "   hola que  tal  ";
-// 	char **result = ft_split(str, ' ');
+// 	char str[] = ",,hola,que,,tal,,,";
+// 	char **result = ft_split(str, ',');
 // 	int	i;
 // 	i = 0;
 // 	while (result[i])

@@ -28,8 +28,8 @@ SOURCE= ft_isalpha.c \
 	ft_strtrim.c \
 	ft_split.c \
 	ft_itoa.c \
-	ft_strmapi \
-	ft_striteri
+	ft_strmapi.c \
+	ft_striteri.c
 
 MY_OBJECTS = $(SOURCE:.c=.o)
 
