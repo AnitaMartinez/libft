@@ -77,9 +77,13 @@ It returns a new string, formed by the concatenation of 's1' and 's2'.
 - **ft_strtrim**.
 It removes all characters from the string 'set' from the beginning and from the end of 's1'.
 - **ft_split**.
+It returns an array of strings resulting from splitting the string 's' into substrings using the 'c' character as delimiter. The array must end with a NULL pointer.
 - **ft_itoa**.
+It generates a string that represents the integer value received as an argument.
 - **ft_strmapi**.
+To each character of the string 's', apply the function 'f' giving as parameters the index of each character within 's' and the character itself. Generates a new string with the result of the successive use of 'f'.
 - **ft_striteri**.
+To each character of the string 's', it applies the 'f' function giving as parameters the index of each character within 's' and the address of the character itself, which can be modified if necessary.
 - **ft_putchar_fd**.
 - **ft_putstr_fd**.
 - **ft_putendl_fd**.
