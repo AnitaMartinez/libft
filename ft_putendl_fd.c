@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 19:49:03 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/18 19:54:44 by anamart3         ###   ########.fr       */
+/*   Created: 2023/04/18 19:55:21 by anamart3          #+#    #+#             */
+/*   Updated: 2023/04/18 20:03:29 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }
 
-// int main(void)
+// int	main(void)
 // {
-//     int fd = 1;
-// 	ft_putchar_fd('a', fd);
+// 	ft_putendl_fd("hola", 1);
 // 	return (0);
 // }

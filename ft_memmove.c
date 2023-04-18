@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:09:06 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/13 19:46:34 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/04/18 20:27:15 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	make_copy(unsigned char *cdst, const unsigned char *csrc, size_t len)
+static void	make_copy(unsigned char *cds, const unsigned char *csrc, size_t len)
 {
 	size_t				i;
 
-	if (csrc < cdst)
+	if (csrc < cds)
 	{
 		i = len;
 		while (i > 0)
 		{
 			i--;
-			cdst[i] = csrc[i];
+			cds[i] = csrc[i];
 		}
 	}
 	else
@@ -30,7 +30,7 @@ static void	make_copy(unsigned char *cdst, const unsigned char *csrc, size_t len
 		i = 0;
 		while (i < len)
 		{
-			cdst[i] = csrc[i];
+			cds[i] = csrc[i];
 			i++;
 		}
 	}

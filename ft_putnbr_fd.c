@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/13 19:49:03 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/18 19:54:44 by anamart3         ###   ########.fr       */
+/*   Created: 2023/04/18 20:04:02 by anamart3          #+#    #+#             */
+/*   Updated: 2023/04/18 20:25:45 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &c, 1);
+	if (n == -2147483648)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		ft_putnbr_fd(147483648, fd);
+	}
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(48 + n, fd);
 }
 
 // int main(void)
 // {
-//     int fd = 1;
-// 	ft_putchar_fd('a', fd);
+// 	ft_putnbr_fd(-2147483648, 1);
 // 	return (0);
 // }
