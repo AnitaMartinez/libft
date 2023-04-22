@@ -35,7 +35,12 @@ SOURCE= ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
+
+SOURCE_BONUS= ft_lstnew
+
 MY_OBJECTS = $(SOURCE:.c=.o)
+
+MY_OBJECTS_BONUS = $(SOURCE_BONUS:.c=.o)
 
 CC = gcc
 
@@ -44,14 +49,17 @@ CFLAGS = -Wall -Wextra -Werror
 $(NAME): $(MY_OBJECTS)
 		@ar r $(NAME) $(MY_OBJECTS)
 
-all:    $(NAME)
+all: $(NAME)
+
+bonus: $(MY_OBJECTS_BONUS)
+	@ar r $(NAME) $(MY_OBJECTS_BONUS)
 
 clean:
-	@rm -f $(MY_OBJECTS)
+	@rm -f $(MY_OBJECTS) $(MY_OBJECTS_BONUS)
 
 fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
