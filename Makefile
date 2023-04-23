@@ -35,9 +35,9 @@ SOURCE= ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c
 
-
 SOURCE_BONUS= ft_lstnew.c \
-	ft_lstadd_front
+	ft_lstadd_front.c \
+	ft_lstsize.c
 
 MY_OBJECTS = $(SOURCE:.c=.o)
 

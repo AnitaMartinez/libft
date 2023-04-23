@@ -3,58 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:08:31 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/22 19:08:31 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/04/23 12:46:38 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// la lista (list) en realidad es un nodo más, pero es el primer  nodo,
-// es decir, la referencia al primer elemento
 void	ft_lstadd_front(t_list **list, t_list *new)
 {
 	if (new == NULL)
-		return;
+		return ;
 
 	if (*list == NULL)
 	{
 		*list = new;
-		return;
+		return ;
 	}
 
-	new->next = *list;
+	new->next = *list; // Si list ya existe, esto quiere decir, que ya es un nodo, pues lo pone como segundo nodo
 	*list = new;
 }
 
+// int main(void)
+// {
 
-// El primero nodo debería o no tener contenido?
+// 	t_list *my_list;
+// 	my_list = NULL;
 
-int main(void)
-{
+// 	t_list *new_node = ft_lstnew("Un nodo");
+// 	ft_lstadd_front(&my_list, new_node);
 
-	t_list	*list;
-	t_list	*some_node;
-	char *str_content = "hola";
-	char *str_content2 = "adios";
+// 	printf("%s\n", my_list->content);
+// 	printf("%p", my_list->next);
 
-	list = (t_list *) malloc(sizeof(t_list)); // TODO: al primer elemento no debería pasarle contenido, creo
-	list->content = str_content;
-	list->next = NULL;
-
-	some_node = (t_list *) malloc(sizeof(t_list));
-	some_node->content = str_content2;
-	some_node->next = NULL;
-
-	printf("Before: %s\n", (char *)list->content);
-
-	ft_lstadd_front(&list, some_node);
-
-	printf("After: %s\n", (char *)list->content);
-
-	printf("After: %s", (char *)list->next->content);
-
-	return (0);
-}
+// 	return (0);
+// }

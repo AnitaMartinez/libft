@@ -3,29 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
+/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 18:45:02 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/22 18:59:00 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/04/23 13:09:38 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// typedef struct s_list
-// {
-// 	void			*content;
-// 	struct s_list	*next;
-// }	t_list;
-
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int	counter;
-	t_list *aux;
+	int		counter;
+	t_list	*aux;
 
 	counter = 0;
 	aux = lst;
-	while (aux->next != NULL)
+	while (aux != NULL)
 	{
 		counter++;
 		aux = aux->next;
@@ -33,30 +27,23 @@ int ft_lstsize(t_list *lst)
 	return (counter);
 }
 
-int main(void)
-{
+// int main(void)
+// {
 
-	t_list	*list;
-	t_list	*node2;
-	t_list	*node3;
-	char *str_content = "hola";
+// 	t_list *my_list;
 
-	list = (t_list *) malloc(sizeof(t_list));
-	list->next = NULL;
+// 	my_list = NULL;
 
-	node2 = (t_list *) malloc(sizeof(t_list));
-	node2->content = str_content;
-	node2->next = NULL;
+// 	t_list *node_1 = ft_lstnew("Nodo 1");
+// 	ft_lstadd_front(&my_list, node_1);
 
-	list->next = node2;
+// 	t_list *node_2 = ft_lstnew("Nodo 2");
+// 	my_list->next = node_2;
 
-	node3 = (t_list *) malloc(sizeof(t_list));
-	node3->content = str_content;
-	node3->next = NULL;
+// 	t_list *node_3 = ft_lstnew("Nodo 3");
+// 	node_2->next = node_3;
 
-	node2->next = node3;
-
-	printf("Result: %i", ft_lstsize(list)); // El primer elemento cuenta? creo que no
-
-	return (0);
-}
+// 	printf("%i", ft_lstsize(my_list));
+	
+// 	return (0);
+// }
