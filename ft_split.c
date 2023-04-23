@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:48:54 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/18 17:55:04 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/23 16:29:47 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	number_of_words(char const *s, char c)
 	return (n);
 }
 
-void	set_final_item(char **strings, int index)
+static void	set_final_item(char **strings, int index)
 {
 	char	*ptrnull;
 
@@ -36,7 +36,7 @@ void	set_final_item(char **strings, int index)
 	strings[index] = ptrnull;
 }
 
-void	set_strings(char const *s, char c, char **strings, int	*i_final_array)
+static void	set_strings(char const *s, char c, char **strings, int	*i_final_array)
 {
 	int	i;
 	int	start;
