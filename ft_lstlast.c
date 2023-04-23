@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 18:45:02 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/23 13:21:45 by anamart3         ###   ########.fr       */
+/*   Created: 2023/04/23 13:15:48 by anamart3          #+#    #+#             */
+/*   Updated: 2023/04/23 15:34:21 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int		counter;
 	t_list	*aux;
 
-	counter = 0;
+	if (lst == NULL)
+		return (NULL);
 	aux = lst;
 	while (aux != NULL)
 	{
-		counter++;
+		lst = aux;
 		aux = aux->next;
 	}
-	return (counter);
+
+	// También se puede hacer así:
+	// while (lst->next)
+	// {
+	// 	lst = lst->next;
+	// }
+	// return (lst);
+	
+	return (lst);
 }
 
 // int main(void)
@@ -42,8 +50,10 @@ int	ft_lstsize(t_list *lst)
 
 // 	t_list *node_3 = ft_lstnew("Nodo 3");
 // 	node_2->next = node_3;
+// 	node_3->next = NULL;
 
-// 	printf("%i", ft_lstsize(my_list));
+// 	t_list *last_node = ft_lstlast(my_list);
+// 	printf("%s", last_node->content);
 	
 // 	return (0);
 // }

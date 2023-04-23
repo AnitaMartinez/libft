@@ -1,49 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 18:45:02 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/23 13:21:45 by anamart3         ###   ########.fr       */
+/*   Created: 2023/04/23 15:05:17 by anamart3          #+#    #+#             */
+/*   Updated: 2023/04/23 15:51:25 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int		counter;
 	t_list	*aux;
 
-	counter = 0;
-	aux = lst;
-	while (aux != NULL)
+	if (new == NULL)
+		return ;
+	if (*lst == NULL)
 	{
-		counter++;
-		aux = aux->next;
+		*lst = new;
 	}
-	return (counter);
+	else
+	{
+		aux = *lst;
+		while (aux->next != NULL)
+		{
+			aux = aux->next;
+		}
+		aux->next = new;
+	}
 }
 
 // int main(void)
 // {
-
-// 	t_list *my_list;
-
-// 	my_list = NULL;
-
-// 	t_list *node_1 = ft_lstnew("Nodo 1");
+// 	t_list *my_list = NULL;
+// 	t_list *node_1 = ft_lstnew("node 1");
 // 	ft_lstadd_front(&my_list, node_1);
-
-// 	t_list *node_2 = ft_lstnew("Nodo 2");
+// 	t_list *node_2 = ft_lstnew("node 2");
 // 	my_list->next = node_2;
-
-// 	t_list *node_3 = ft_lstnew("Nodo 3");
-// 	node_2->next = node_3;
-
-// 	printf("%i", ft_lstsize(my_list));
-	
+// 	t_list *node_3 = ft_lstnew("node 3");
+// 	ft_lstadd_back(&my_list, node_3);
+// 	while (my_list != NULL)
+// 	{
+// 		printf("%s\n", my_list->content);
+// 		my_list = my_list->next;
+// 	}
 // 	return (0);
 // }
