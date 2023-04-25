@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 19:48:54 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/23 16:29:47 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/25 20:31:56 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,73 +14,80 @@
 
 static int	number_of_words(char const *s, char c)
 {
-	int	i;
 	int	n;
 
-	i = 0;
 	n = 0;
-	while (s[i])
+	while (*s)
 	{
-		if ((s[i] != c) && (s[i + 1] == c || s[i + 1] == '\0'))
+		if ((*s != c) && (*(s + 1) == c || *(s + 1) == '\0'))
 			n++;
-		i++;
+		s++;
 	}
 	return (n);
 }
 
-static void	set_final_item(char **strings, int index)
+static char	**free_all(char **strings)
 {
-	char	*ptrnull;
+	unsigned int	i;
 
-	ptrnull = NULL;
-	strings[index] = ptrnull;
-}
-
-static void	set_strings(char const *s, char c, char **strings, int	*i_final_array)
-{
-	int	i;
-	int	start;
-	int	len;
-	int	ci_final_array;
-
-	ci_final_array = *i_final_array;
 	i = 0;
-	while (s[i])
+	while (strings[i])
 	{
-		if ((s[i] != c) && (i == 0 || s[i - 1] == c))
-			start = i;
-		if ((s[i] != c) && (s[i + 1] == '\0' || s[i + 1] == c))
-		{
-			len = (i - start) + 1;
-			strings[ci_final_array] = ft_substr(s, start, len);
-			ci_final_array++;
-		}
+		free(strings[i]);
 		i++;
 	}
-	*i_final_array = ci_final_array;
+	free(strings);
+	return (NULL);
+}
+
+static char	*get_next_word(char const *s, char c, int *i)
+{
+	char	*word;
+	int		start;
+	int		len;
+
+	while (s[*i] && s[*i] == c)
+		(*i)++;
+	start = *i;
+	while (s[*i] && s[*i] != c)
+		(*i)++;
+	len = *i - start;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	ft_strlcpy(word, s + start, len + 1);
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		words_number;
 	char	**strings;
+	int		words_number;
+	int		i;
 	int		i_final_array;
 
 	if (!s)
 		return (NULL);
 	words_number = number_of_words(s, c);
-	strings = malloc((words_number + 1) * sizeof(char *));
-	if (strings == NULL)
+	strings = (char **)malloc(sizeof(char *) * (words_number + 1));
+	if (!strings)
 		return (NULL);
+	i = 0;
 	i_final_array = 0;
-	set_strings(s, c, strings, &i_final_array);
-	set_final_item(strings, i_final_array);
+	while (i_final_array < words_number)
+	{
+		strings[i_final_array] = get_next_word(s, c, &i);
+		if (!strings[i_final_array])
+			return (free_all(strings));
+		i_final_array++;
+	}
+	strings[i_final_array] = NULL;
 	return (strings);
 }
 
 // int	main(void)
 // {
-// 	char str[] = ",,hola,que,,tal,,,";
+// 	char str[] = ",,,hola,que,,tal,,";
 // 	char **result = ft_split(str, ',');
 // 	int	i;
 // 	i = 0;
