@@ -6,11 +6,18 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:09:49 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/08 18:43:56 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/26 19:32:14 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	get_result_length(size_t dst_l, size_t dstsize, size_t src_l)
+{
+	if (dst_l > dstsize)
+		return (src_l + dstsize);
+	return (dst_l + src_l);
+}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -19,10 +26,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i_dst;
 	size_t	i_src;
 
+	if (!dst || !src)
+		return (0);
 	initial_dst_length = ft_strlen(dst);
 	src_length = ft_strlen(src);
 	i_dst = initial_dst_length;
 	i_src = 0;
+	if (dstsize <= initial_dst_length)
+		return (src_length + dstsize);
 	if (dstsize != 0)
 	{
 		while (src[i_src] && i_dst < dstsize - 1)
@@ -33,9 +44,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i_dst] = '\0';
 	}
-	if (initial_dst_length > dstsize)
-		return (src_length + dstsize);
-	return (initial_dst_length + src_length);
+	return (get_result_length(initial_dst_length, dstsize, src_length));
 }
 
 // #include <string.h>
