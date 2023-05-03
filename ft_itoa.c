@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:31:24 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/18 20:26:26 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:04:59 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_itoa(int n)
 	int		len;
 
 	if (n == -2147483648)
-		return (ft_substr("-2147483648", 0, 11));
+		return (ft_strdup("-2147483648"));
 	len = number_len(n);
 	str = (char *)malloc(len + 1 * sizeof(char));
 	if (str == NULL)
