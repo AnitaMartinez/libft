@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 15:40:38 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/23 12:21:55 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/04/26 19:47:52 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ t_list	*ft_lstnew(void *content)
 // 	char *str = "Soy un nodo";
 // 	t_list *new_node = ft_lstnew(str);
 // 	if (new_node != NULL)
-// 	{
 // 		printf("Node content: %s", (char *)new_node->content);
-// 	}
 // 	return (0);
 // }

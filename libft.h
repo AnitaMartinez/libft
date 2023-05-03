@@ -6,7 +6,7 @@
 /*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:30:07 by anamart3          #+#    #+#             */
-/*   Updated: 2023/05/03 17:44:52 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/05/03 17:45:29 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 
 #endif
