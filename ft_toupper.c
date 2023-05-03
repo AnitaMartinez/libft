@@ -6,7 +6,7 @@
 /*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:11:03 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/13 19:47:29 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/05/03 17:28:24 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
-		return (c -= 32);
+		return (c - 32);
 	return (c);
 }

@@ -16,7 +16,9 @@ It checks whether the argument passed is an alphanumeric character (alphabet or 
 - **isascii**.
 It tests for an ASCII character (in the range 0 to 127). Returns: Nonzero if c is an ASCII character; otherwise, zero.
 - **isprint**.
+It tests for any printing character, including space.
 - **strlen**.
+It computes the length of the string.
 - **memset**.
 It copies the character c (an unsigned char) to the first n characters of the string pointed to.
 - **bzero**.
@@ -25,7 +27,9 @@ It erases the data in the n bytes of the memory. Starting at the location pointe
 It concatenates strings. It appends string 'src' to the end of 'dst'.
 It returns the total length of the string it tries to create, that means the initial length of 'dst' plus the length of 'src'.
 - **toupper**.
+It converts a lower-case letter to the corresponding upper-case letter.
 - **tolower**.
+It converts an upper-case letter to the corresponding lower-case letter.
 - **atoi**.
 It converts the string to int representation.
 
@@ -48,13 +52,13 @@ The terminating null character is considered to be part of the string; therefore
 - **strrchr**.
 It is like strchr, but it searches for the last occurrence of the character c.
 - **memchr**.
-It locates the first occurrence of c (converted to an unsigned char) in string s. It returns a pointer to the byte located, or NULL if no such byte exists within n bytes.
+It locates the first occurrence of c (converted to an unsigned char) in the buffer s. It returns a pointer to the byte located, or NULL if no such byte exists within n bytes.
 - **strnstr**.
 It locates the first occurrence of the null-terminated string needle in the null-terminated string haystack.
 
 **Comparation functions**
 - **memcmp**.
-It compares byte string 's1' against byte string 's2'. 
+It compares byte string 's1' against byte string 's2'.
 If they are equal, it returns 0; if they are not equal, it returns the subtraction of the first different character.
 - **strncmp**.
 It compares at most the first 'n' bytes of 'str1' and 'str2'. It returns an integer greater than, equal to, or less than 0, according as the string 's1' is greater than, equal to, or less than the string 's2'.
