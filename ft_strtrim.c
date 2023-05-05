@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 15:17:51 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/04/12 16:26:23 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/05/05 14:04:32 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	index_begin;
 	int	index_end;
 
-	if (!s1 && !set)
+	if (!s1 || !set)
 		return (NULL);
 	index_begin = get_index_start(s1, set);
 	index_end = get_index_end(s1, set);
