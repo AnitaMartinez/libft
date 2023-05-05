@@ -6,7 +6,7 @@
 /*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 19:29:14 by anamartinez       #+#    #+#             */
-/*   Updated: 2023/05/03 18:33:15 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/05/05 13:52:48 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,10 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 // 	(void)i;
 // 	*c = ft_toupper(*c);
 // }
-
 // int	main(void)
 // {
 // 	char str[] = "hola";
-
 // 	ft_striteri(str, aux_function);
-
 // 	printf("Result %s", str);
-
 // 	return (0);
 // }
