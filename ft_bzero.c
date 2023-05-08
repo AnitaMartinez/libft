@@ -6,7 +6,7 @@
 /*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:07:18 by anamart3          #+#    #+#             */
-/*   Updated: 2023/05/03 17:07:07 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/05/08 18:59:33 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-
 
 /*#include <strings.h>
 int main(void)
