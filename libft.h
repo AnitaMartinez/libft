@@ -6,14 +6,13 @@
 /*   By: anamartinez <anamartinez@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:30:07 by anamart3          #+#    #+#             */
-/*   Updated: 2023/05/05 13:45:57 by anamartinez      ###   ########.fr       */
+/*   Updated: 2023/05/08 17:55:14 by anamartinez      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h> //TODO: luego borrar
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>

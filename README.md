@@ -89,8 +89,14 @@ To each character of the string 's', apply the function 'f' giving as parameters
 - **ft_striteri**.
 To each character of the string 's', it applies the 'f' function giving as parameters the index of each character within 's' and the address of the character itself, which can be modified if necessary.
 - **ft_putchar_fd**.
+It sends the character ’c’ to the file descriptor specified.
 - **ft_putstr_fd**.
+It sends the string ’s’ to the file descriptor specified.
 - **ft_putendl_fd**.
+It sends the character ’c’ to the file descriptor specified, following by a newline.
 - **ft_putnbr_fd**.
+It sends the number ’n’ to the file descriptor specified.
 
+### Bonus
 
+Functions that work with linked lists.
