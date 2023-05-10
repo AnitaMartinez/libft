@@ -6,7 +6,7 @@
 /*   By: anamart3 <anamart3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 19:09:49 by anamart3          #+#    #+#             */
-/*   Updated: 2023/04/26 19:32:14 by anamart3         ###   ########.fr       */
+/*   Updated: 2023/05/10 20:03:41 by anamart3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i_dst;
 	size_t	i_src;
 
-	if (!dst || !src)
-		return (0);
 	initial_dst_length = ft_strlen(dst);
 	src_length = ft_strlen(src);
 	i_dst = initial_dst_length;
@@ -47,16 +45,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (get_result_length(initial_dst_length, dstsize, src_length));
 }
 
-// #include <string.h>
+// #include <stdio.h>
 // int	main(void)
 // {
-// 	char dst[] = "123456789";
 // 	char dst1[] = "123456789";
 // 	char src[] = "ana";
 // 	size_t total_length = 0;
-// 	printf("Official function return: %lu\n", strlcat(dst, src, total_length));
-// 	printf("Official function dst: %s\n", dst);
-// 	printf("My function return: %lu\n", ft_strlcat(dst1, src, total_length));
+// 	printf("My function return: %lu\n", ft_strlcat(dst1, NULL, total_length));
 // 	printf("My function dst: %s\n", dst1);
 // 	return (0);
 // }
